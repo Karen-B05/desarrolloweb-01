@@ -1,8 +1,10 @@
+/* Aplica al texto el color negro por defecto */
 *{
     color: #000000;
     
 }
 
+/* Aplica cambio de color al head y body */
 head{
     background-color: rgb(242, 242, 242);
 }
@@ -11,6 +13,7 @@ body{
     background-color: rgb(242, 242, 242);
 }
 
+/* Estilos para los campos de entrada y el enlace */
 input{
     width: 250px;
     padding: 10px;
@@ -26,7 +29,7 @@ a{
     background-color: #8086f0;
 }
 
-
+/* Estilos para los contenedores principales */
 .cont-principal-pag1{
     justify-content: center;
     align-items: center;
@@ -35,10 +38,13 @@ a{
 .cont-principal-pag2{
     margin: 0 auto;
     display: grid;
+    /* Usa grid para dividir en 3 columnas iguales */
     grid-template-columns: 33% 33% 33%;
     column-gap: 10px;
 }
 
+
+/* Clases para centrar el contenido */
 .login{
     text-align: center;
 }
@@ -47,11 +53,13 @@ a{
     text-align: center;
 }
 
+/* Estilo para las imagenes */
 .img{
     width: 350px;
     margin: 30px;
 }
 
+/* Estilos para las columnas de la página interior */
 .div-1{
     background-color: #ff85ef;
     border-radius: 30px;
