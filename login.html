@@ -1,4 +1,4 @@
-<!-- Home page -->
+<!-- Login page -->
 
 <html>
 <head>
@@ -10,18 +10,22 @@
 <body>
     <!-- Encabezado -->
     <header>
-        <h1>Home - A00840405</h1>
+        <h1>Login - A00840405</h1>
     </header>
     <!-- Contenedor principal de la página -->
     <div class="cont-principal-pag1">
-        <div class="home">
-            <h1>Home page</h1>
-            <br /><br /><br />
-            <!-- Botones para ir a inicio de sesion o registrarse -->
-            <button><a href="login.html">Iniciar sesión</a></button>
+        <div class="login">
+            <h1>Login</h1>
+            <br />
+            <!-- Campos para ingresar los datos -->
+            <!-- type="email" valida el tipo de formato -->
+            <input type="email" placeholder="Correo electrónico" required/>
             <br /><br />
-            <button><a href="register.html">Registrarse</a></button>
+            <!-- type="password" oculta lo escrito en el campo -->
+            <input type="password" placeholder="Contraseña" required/>
             <br /><br /><br />
+            <!-- Botón que redirige a la página interna -->
+            <button><a href="info.html">Iniciar sesión</a></button>
         </div>
     </div>
     <!-- Pie de página -->

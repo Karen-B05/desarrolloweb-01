@@ -13,7 +13,7 @@ body{
     background-color: rgb(242, 242, 242);
 }
 
-/* Estilos para los campos de entrada y el enlace */
+/* Estilos para los campos de entrada y los botones */
 input{
     width: 250px;
     padding: 10px;
@@ -21,12 +21,15 @@ input{
     border: 1px solid #c8c6c6;
 }
 
-a{
-    width: 200px;
-    padding: 10px;
+button{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(84, 105, 212);
     border-radius: 10px;
     border: 1px solid #969696;
-    background-color: #8086f0;
+    padding: 6px 8px;
 }
 
 /* Estilos para los contenedores principales */
@@ -46,6 +49,14 @@ a{
 
 /* Clases para centrar el contenido */
 .login{
+    text-align: center;
+}
+
+.register{
+    text-align: center;
+}
+
+.home{
     text-align: center;
 }
 
