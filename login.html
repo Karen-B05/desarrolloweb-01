@@ -18,19 +18,37 @@
             <h1>Login</h1>
             <br />
             <!-- Campos para ingresar los datos -->
-            <!-- type="email" valida el tipo de formato -->
-            <input type="email" placeholder="Correo electrónico" required/>
-            <br /><br />
-            <!-- type="password" oculta lo escrito en el campo -->
-            <input type="password" placeholder="Contraseña" required/>
-            <br /><br /><br />
-            <!-- Botón que redirige a la página interna -->
-            <button><a href="info.html">Iniciar sesión</a></button>
+            <form id="loginForm">
+                <!-- type="email" valida el tipo de formato -->
+                <input type="email" id="email" placeholder="Correo electrónico" required/>
+                <br /><br />
+                <!-- type="password" oculta lo escrito en el campo -->
+                <input type="password" id="password" placeholder="Contraseña" required/>
+                <br /><br /><br />
+                <!-- Botón que redirige a la página interna -->
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <p id="mensaje" style="color:red;"></p>
         </div>
     </div>
     <!-- Pie de página -->
     <footer>
         <p>© 2026 Desarrollo Web - A00840405</p>
     </footer>
+    <script>
+        //Evento de escucha para manejar el envío
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Obtener valores ingresados
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            // Validar credenciales 
+            if (email === 'admin123@gmail.com' && password === 'pass123') {
+                window.location.href = 'info.html';
+            } else {
+                document.getElementById('mensaje').textContent = 'Correo electrónico o contraseña incorrectos.';
+            }
+        });
+    </script>
 </body>
 </html>

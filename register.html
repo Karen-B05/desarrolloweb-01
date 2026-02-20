@@ -1,4 +1,4 @@
-<!-- Login page -->
+<!-- Registration page -->
 
 <html>
 <head>
@@ -18,20 +18,45 @@
             <h1>Registro</h1>
             <br />
             <!-- Campos para ingresar los datos -->
-            <!-- type="email" valida el tipo de formato -->
-            <input type="email" placeholder="Correo electrónico" required/>
-            <br /><br />
-            <!-- type="password" oculta lo escrito en el campo -->
-            <input type="password" placeholder="Contraseña" required/>
-            <input type="password" placeholder="Confirmar contraseña" required/>
-            <br /><br /><br />
-            <!-- Botón que redirige a la página interna -->
-            <button><a href="info.html">Registrarse</a></button>
+            <form id="registerForm">
+                <!-- type="email" valida el tipo de formato -->
+                <input type="email" id="email" placeholder="Correo electrónico" required/>
+                <br /><br />
+                <!-- type="password" oculta lo escrito en el campo -->
+                <input type="password" id="password" placeholder="Contraseña" required/>
+                <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required/>
+                <br /><br /><br />
+                <!-- Botón que redirige a la página interna -->
+                <button type="submit">Registrarse</button>
+            </form>
+            <p id="mensaje" style="color:red;"></p>
         </div>
     </div>
     <!-- Pie de página -->
     <footer>
         <p>© 2026 Desarrollo Web - A00840405</p>
     </footer>
+    <script>
+        //Evento de escucha para manejar el envío
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Obtener valores ingresados
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            // Validar que las contraseñas coincidan
+            if(password !== confirmPassword){
+                document.getElementById("mensaje").textContent = "Las contraseñas no coinciden";
+                return;
+            }
+            // Guardar usuario en localStorage
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            usuarios.push({email, password});
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            console.log("Usuario registrado:", email);
+            alert("Registro exitoso");
+            window.location.href = "info.html";
+        });
+    </script>
 </body>
 </html>
