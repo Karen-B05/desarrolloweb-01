@@ -44,6 +44,10 @@
             const password = document.getElementById('password').value;
             // Validar credenciales 
             if (email === 'admin123@gmail.com' && password === 'pass123') {
+                // Crear token
+                const token = Math.random().toString(36).substring(2);
+                localStorage.setItem("token", token);
+                localStorage.setItem("usuarioActivo", email);
                 window.location.href = 'info.html';
             } else {
                 document.getElementById('mensaje').textContent = 'Correo electrónico o contraseña incorrectos.';

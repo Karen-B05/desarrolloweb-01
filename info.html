@@ -9,20 +9,15 @@
 </head>
 <body>
      <!-- Encabezado -->
-    <header>
-        <h1>Contenido - A00840405</h1>
-        <nav>
-            <ul>
-                <button><a href="index.html">Inicio</a></button>
-                <button><a href="login.html">Inicio de sesion</a></button>
-                <button><a href="register.html">Registro</a></button>
-                <button><a href="info.html">Contenido</a></button>
-                <button><a href="page1.html">Página 1</a></button>
-                <button><a href="page2.html">Página 2</a></button>
-                <button><a href="page3.html">Página 3</a></button>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const token = localStorage.getItem("token");
+            if(!token){
+                window.location.href = "login.html";
+            }
+        });
+    </script>
     <h1>Contenido</h1>
     <!-- Contenedor principal de la página que usa grid para dividir el contenido en 3 columnas -->
     <div class="cont-principal-pag2">
@@ -30,27 +25,26 @@
         <div class="div-1">
             <div class="centro">
                 <img src="https://images.pexels.com/photos/32710697/pexels-photo-32710697.jpeg" class="img"/>
-                <button><a href="page1.html">Entrar</a></button>
+                <button onclick="location.href='page1.html'">Entrar</button>
             </div>
         </div>
         <!-- Segunda columna -->
         <div class="div-2">
             <div class="centro">
                 <img src="https://images.pexels.com/photos/3631659/pexels-photo-3631659.jpeg" class="img"/>
-                <button><a href="page2.html">Entrar</a></button>
+                <button onclick="location.href='page2.html'">Entrar</button>
             </div>
         </div>
         <!-- Tercera columna -->
         <div class="div-3">
             <div class="centro">
                 <img src="https://images.pexels.com/photos/7053881/pexels-photo-7053881.jpeg" class="img"/>
-                <button><a href="page3.html">Entrar</a></button>
+                <button onclick="location.href='page3.html'">Entrar</button>
             </div>  
         </div>
     </div>
     <!-- Pie de página -->
-    <footer>
-        <p>© 2026 Desarrollo Web - A00840405</p>
-    </footer>
+    <div id="footer"></div>
+    <script src="function.js"></script>
 </body>
 </html>
