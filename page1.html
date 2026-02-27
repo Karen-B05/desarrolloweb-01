@@ -18,10 +18,18 @@
             }
         });
     </script>
-    <h1>Contenido</h1>
-    <div>
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmZsMW5lN2J6cWFkb3pxMm40ZGJnd3JvMWV0emtkZ3p5NDhscDA1MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ObmvehpNJuIg0LFgKA/giphy.gif" class="img"/>
+
+    <div class="pokedex">
+        <h1 class="poketitulo">Pokédex</h1>
+        <div class="pokebuscador">
+            <input type="text" id="pokemonInput" placeholder="Ej: pikachu, fire, 132...">
+            <button onclick="buscarPokemon()">Buscar</button>
+        </div>
+        <div id="resultado" class="pokecaja">
+            <p>Busca un pokemon...</p>
+        </div>
     </div>
+
     <!-- Pie de página -->
     <div id="footer"></div>
     <script src="function.js"></script>

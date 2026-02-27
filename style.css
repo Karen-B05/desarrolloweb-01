@@ -88,3 +88,47 @@ button{
     border-radius: 30px;
     margin: 20px;
 }
+
+/* Estilos para el contenedor de la pokedex */
+.pokedex {
+    background-color: #121557;
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.poketitulo {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.pokebuscador {
+    margin-bottom: 15px;
+}
+
+.pokebuscador input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    width: 60%;
+}
+
+.pokebuscador button {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #212121;
+    color: white;
+}
+
+.pokecaja {
+    background-color: #dddddd;
+    padding: 15px;
+    border-radius: 15px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
