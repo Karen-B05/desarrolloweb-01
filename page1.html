@@ -20,14 +20,39 @@
     </script>
 
     <div class="pokedex">
-        <h1 class="poketitulo">Pokédex</h1>
-        <div class="pokebuscador">
-            <input type="text" id="pokemonInput" placeholder="Ej: pikachu, fire, 132...">
-            <button onclick="buscarPokemon()">Buscar</button>
+        <form id="controlsForm">
+            <h1 class="poketitulo">Pokédex</h1>
+            <div class="pokebuscador">
+                <input type="text" id="q" placeholder="Ej: pikachu, fire, 132...">
+                <button onclick="buscarPokemon()">Buscar</button>
+            </div>
+            <select id="typeFilter">
+                <option value="">Todos los tipos</option>
+            </select>
+            <select id="sortBy">
+                <option value="id-asc">ID Ascendente</option>
+                <option value="id-desc">ID Descendente</option>
+                <option value="name-asc">Nombre A-Z</option>
+                <option value="name-desc">Nombre Z-A</option>
+            </select>
+        </form>
+        <main id="results" class="pokemon-grid"></main>
+        <div class="loadmore-container">
+            <button id="loadMore">Cargar más</button>
         </div>
-        <div id="resultado" class="pokecaja">
-            <p>Busca un pokemon...</p>
-        </div>
+        <template id="pokemon-card-template">
+            <div class="pokemon-card">
+                <img class="card-img">
+                <h2 class="pokemon-name"></h2>
+                <p class="pokemon-id"></p>
+                <div class="types">
+                </div>
+                <h3>Habilidades</h3>
+                <ul class="ability-list"></ul>
+                <h3>Stats</h3>
+                <ul class="stats-list"></ul>
+            </div>
+        </template>
     </div>
 
     <!-- Pie de página -->
