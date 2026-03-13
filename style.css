@@ -146,3 +146,79 @@ button{
     border-radius:10px;
     cursor:pointer;
 }
+
+/* ----- Estilos para la batalla Pokémon ----- */
+#battle-screen,
+#winner-screen {
+    display: none;
+}
+
+#battle-screen.active,
+#winner-screen.active {
+    display: block;
+}
+
+#selection-screen {
+    display:block;
+}
+
+#selection-screen:not(.active){
+    display:none;
+}
+
+.battle-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pokemon-box {
+    text-align: center;
+}
+
+.hp-bar {
+    width: 150px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hp-bar div {
+    height: 100%;
+    background: limegreen;
+    width: 100%;
+}
+
+#log-list {
+    max-height: 200px;
+    overflow: auto;
+    text-align: left;
+}
+
+.shake {
+    animation: shake 0.5s;
+    filter: sepia(1) saturate(5) hue-rotate(-50deg);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0)
+    }
+    25% {
+        transform: translateX(-5px)
+    }
+    50% {
+        transform: translateX(5px)
+    }
+    75% {
+        transform: translateX(-5px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.shiny-anim {
+    filter: drop-shadow(0 0 10px gold);
+}
